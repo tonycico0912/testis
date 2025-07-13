@@ -26,7 +26,7 @@ git remote add origin <원격저장소주소>
 ```
 예시:
 ```bash
-git remote add origin https://github.com/your-username/your-repo.git
+git remote add origin https://github.com/tonycico0912/testis.git
 ```
 3. 원격 저장소로 푸시(push)
 ```bash
