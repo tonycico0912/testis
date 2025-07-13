@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테트리스 게임</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+        .game-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        canvas {
+            border: 2px solid #fff;
+            background-color: #111;
+        }
+        .info-panel {
+            color: #fff;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+        }
+        .info-panel h2 {
+            margin-top: 0;
+        }
+        .score, .level, .lines {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .controls {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .controls h3 {
+            margin-bottom: 10px;
+        }
+        .controls p {
+            margin: 5px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .game-over {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <div class="info-panel">
+            <h2>테트리스</h2>
+            <div class="score">점수: <span id="score">0</span></div>
+            <div class="level">레벨: <span id="level">1</span></div>
+            <div class="lines">라인: <span id="lines">0</span></div>
+            <div class="controls">
+                <h3>조작법</h3>
+                <p>← → : 좌우 이동</p>
+                <p>↓ : 빠르게 내리기</p>
+                <p>↑ : 회전</p>
+                <p>Space : 한번에 내리기</p>
+                <p>P : 일시정지</p>
+            </div>
+            <button onclick="resetGame()">새 게임</button>
+            <div class="game-over" id="gameOver">게임 오버!</div>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #444; color: #888; font-size: 12px;">
+                <p>Created By Claude Code & tonycico</p>
+                <p>2025-07-13</p>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
